@@ -1,0 +1,12 @@
+About
+========
+
+This program was developed by Juan Reyes L. (juan.reyes.lopez at gmail dot com) as final project for the course Stochastic Processes Simulation dicted by Héctor Allende at Universidad Técnica Federico Santa María (Chile).
+
+Program based on Particle Filter Tracker by Rob Hess http://blogs.oregonstate.edu/hess/code/particles/
+
+November 2011
+
+
+
+

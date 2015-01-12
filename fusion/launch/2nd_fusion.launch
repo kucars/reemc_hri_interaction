@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="rate"		default="30"/>
+  <arg name="faces_topic"		default="/pal_face/faces"/>
+  <arg name="sound_loc_topic"		default="/sound_localisation"/>
+  <arg name="camera_frames"		default="/camera/image_raw"/>
+  <arg name="best_face"		default="/pal_face/best_face"/>
+
+  <node name="fusion" pkg="test" type="fusion" args="$(arg faces_topic) $(arg sound_loc_topic) $(arg camera_frames) $(arg best_face)  $(arg rate)" output="screen">
+  </node>
+</launch>
+

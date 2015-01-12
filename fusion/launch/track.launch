@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="rate"		default="30"/>
+  <arg name="faces_topic"		default="/pal_face/faces"/>
+  <arg name="frame_width"		default="640"/>
+
+  <node name="tracker" pkg="test" type="tracker" args="$(arg faces_topic) $(arg rate) $(arg frame_width)" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,68 @@
+Use
+======
+
+Pftracker can adquire the images from two kinds of sources:
+
+* A video file
+
+* The computer webcam
+
+In order to get the image from a video file using default parameters:
+
+``./bin/pftracker -v somevideo.avi``
+
+In order to get image from the computer webcam  using defaults parameters:
+
+``./bin/pftracker``
+
+After executing a window with the adquired images will be displayed at very slow motion until the user select with
+the mouse the region containing the tracking target. In order to do this selection mantain pressed the left button of the mouse next to the target and a rectangle will be displayed, the selection ends when the button is released.
+
+.. image::
+   ../_static/use1.png
+
+After this the tracker will try to put a red rectangle over the desired target frame by frame :
+
+
+.. image::
+   ../_static/use2.png
+
+Other options
+
+Print help message:
+
+``./bin/pftracker -h``
+
+Printed messsage:
+
+``Usage:
+./bin/main [-p particlesNumber] [-v videoPath] [-sp] [-sd particle_pos_sd] [-sds scale_factor_sd] [-h]
+The -sp option means show particles
+The -h option prints this instructions``
+
+With the -sp option the rectangle of each particle is drawed:
+
+``./bin/pftracker -v video/shoot.mpg -sp``
+
+.. image::
+   ../_static/use3.png
+
+With the -p option is posible to specify the number used particles and with sd the standard deviation of the gaussian random number
+centered at zero that is added to the particle position at each frame. At more sd, more dispersed particles:
+
+.. image::
+   ../_static/use4.png
+
+The -sds is the standard deviation of the gaussian random number centered at zero that is added to the particle scale at each frame.
+
+The default values for this variables are:
+
+standard deviation 15
+
+scale standard deviation 0.1
+
+number of particles 100
+
+
+
+

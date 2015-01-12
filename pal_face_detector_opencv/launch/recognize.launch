@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="camera_frames" 	default="/nao_camera/image_raw"/>
+  <arg name="detected_faces" 	default="/pal_face/faces"/>
+   <arg name="publish_to" 	default="/pal_face/recognized"/>
+  <arg name="rate"		default="10"/>
+  <arg name="csv_file"		default="$(find pal_face_detector_opencv)/config/inputs.csv" />
+
+  <node name="recognize" pkg="pal_face_detector_opencv" type="recognize" args="$(arg camera_frames) $(arg detected_faces) $(arg rate) $(arg csv_file) $(arg publish_to)" output="screen">
+  </node>
+</launch>

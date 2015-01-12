@@ -1,0 +1,21 @@
+Install
+=======
+Dependencies:
+OpenCV Library (libcv-dev >= 2.1 and libhighgui-dev >= 2.1)
+
+*1.* Decompress pftracker.tar.gz
+
+
+``tar -xvzf pftracker.tar.gz``
+
+*2.* Enter to the created directory
+
+``cd pftracker``
+
+*3.* Compile the source
+
+``make``
+
+This will generate an executable called pftracker in the bin directory.
+
+

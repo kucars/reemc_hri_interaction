@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="device" 	default="hw:2;0"/>
+
+  <node name="pal_jackproc" pkg="pal_jackproc" type="jackDeployer" args="$(arg device)" output="screen"></node>
+  <node name="pal_sound_loc" pkg="pal_sound_loc" type="pal_sound_loc" output="screen">
+  </node>
+</launch>

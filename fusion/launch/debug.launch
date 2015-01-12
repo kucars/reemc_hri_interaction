@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="rate"		default="30"/>
+
+  <node name="debug" pkg="test" type="debug" args="$(arg rate)" output="screen">
+  </node>
+</launch>

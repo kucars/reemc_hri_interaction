@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="camera_frames" 	default="/camera/image_raw"/>
+  <arg name="face" 		default="/pal_face/best_face"/>
+  <arg name="rate"		default="30"/>
+  <arg name="Show_particles"		default="0"/>
+  <node name="particle_tracker" pkg="particle_tracker" type="particleFilter" args="$(arg camera_frames) $(arg face) $(arg rate) $(arg Show_particles)" output="screen">
+  </node>
+</launch>

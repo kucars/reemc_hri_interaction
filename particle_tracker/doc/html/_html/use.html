@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Use &mdash; Pftracker 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Pftracker 1.0 documentation" href="../index.html" />
+    <link rel="next" title="How it works" href="how_it_works.html" />
+    <link rel="prev" title="Install" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="how_it_works.html" title="How it works"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Install"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../user_manual.html">Pftracker 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="use">
+<h1>Use<a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h1>
+<p>Pftracker can adquire the images from two kinds of sources:</p>
+<ul class="simple">
+<li>A video file</li>
+<li>The computer webcam</li>
+</ul>
+<p>In order to get the image from a video file using default parameters:</p>
+<p><tt class="docutils literal"><span class="pre">./bin/pftracker</span> <span class="pre">-v</span> <span class="pre">somevideo.avi</span></tt></p>
+<p>In order to get image from the computer webcam  using defaults parameters:</p>
+<p><tt class="docutils literal"><span class="pre">./bin/pftracker</span></tt></p>
+<p>After executing a window with the adquired images will be displayed at very slow motion until the user select with
+the mouse the region containing the tracking target. In order to do this selection mantain pressed the left button of the mouse next to the target and a rectangle will be displayed, the selection ends when the button is released.</p>
+<img alt="../_images/use1.png" src="../_images/use1.png" />
+<p>After this the tracker will try to put a red rectangle over the desired target frame by frame :</p>
+<img alt="../_images/use2.png" src="../_images/use2.png" />
+<p>Other options</p>
+<p>Print help message:</p>
+<p><tt class="docutils literal"><span class="pre">./bin/pftracker</span> <span class="pre">-h</span></tt></p>
+<p>Printed messsage:</p>
+<p><tt class="docutils literal"><span class="pre">Usage:</span>
+<span class="pre">./bin/main</span> <span class="pre">[-p</span> <span class="pre">particlesNumber]</span> <span class="pre">[-v</span> <span class="pre">videoPath]</span> <span class="pre">[-sp]</span> <span class="pre">[-sd</span> <span class="pre">particle_pos_sd]</span> <span class="pre">[-sds</span> <span class="pre">scale_factor_sd]</span> <span class="pre">[-h]</span>
+<span class="pre">The</span> <span class="pre">-sp</span> <span class="pre">option</span> <span class="pre">means</span> <span class="pre">show</span> <span class="pre">particles</span>
+<span class="pre">The</span> <span class="pre">-h</span> <span class="pre">option</span> <span class="pre">prints</span> <span class="pre">this</span> <span class="pre">instructions</span></tt></p>
+<p>With the -sp option the rectangle of each particle is drawed:</p>
+<p><tt class="docutils literal"><span class="pre">./bin/pftracker</span> <span class="pre">-v</span> <span class="pre">video/shoot.mpg</span> <span class="pre">-sp</span></tt></p>
+<img alt="../_images/use3.png" src="../_images/use3.png" />
+<p>With the -p option is posible to specify the number used particles and with sd the standard deviation of the gaussian random number
+centered at zero that is added to the particle position at each frame. At more sd, more dispersed particles:</p>
+<img alt="../_images/use4.png" src="../_images/use4.png" />
+<p>The -sds is the standard deviation of the gaussian random number centered at zero that is added to the particle scale at each frame.</p>
+<p>The default values for this variables are:</p>
+<p>standard deviation 15</p>
+<p>scale standard deviation 0.1</p>
+<p>number of particles 100</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Install</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="how_it_works.html"
+                        title="next chapter">How it works</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/_html/use.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="how_it_works.html" title="How it works"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Install"
+             >previous</a> |</li>
+        <li><a href="../user_manual.html">Pftracker 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Juan Reyes L..
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

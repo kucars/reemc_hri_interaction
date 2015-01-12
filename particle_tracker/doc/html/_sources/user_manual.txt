@@ -1,0 +1,23 @@
+.. Pftracker documentation master file, created by
+   sphinx-quickstart on Mon Nov 28 21:29:34 2011.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Pftracker's documentation!
+=====================================
+
+Pftracker is a video tracker program that uses particle filter tecnique in order to follow some user defined target frame to frame.
+
+Contents:
+
+
+.. toctree::
+    
+    _html/install
+    
+    _html/use
+    
+    _html/how_it_works
+
+    _html/about
+

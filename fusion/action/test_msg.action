@@ -1,0 +1,7 @@
+#goal definition
+string request
+---
+#result definition
+pal_detection_msgs/FaceDetection  selected_face
+---
+#no actual feedback

@@ -1,0 +1,14 @@
+<package>
+  <description brief="interact">
+
+     interact
+
+  </description>
+  <author>Omar Sinan</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="rospy"/>
+
+</package>
+
+

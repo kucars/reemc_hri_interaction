@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="rate"		default="15"/>
+  <arg name="faces_topic"		default="/pal_face/faces"/>
+  <arg name="sound_loc_topic"		default="/sound_localisation"/>
+  <arg name="camera_frames"		default="/stereo/left/image"/>
+  <arg name="camera_info"		default="/stereo/left/camera_info"/>
+  <arg name="best_face"		default="/pal_face/best_face"/>
+  <arg name="sound_db_threshold" default="20.0"/>
+
+  <node name="fusion" pkg="fusion" type="fusion" args="$(arg faces_topic) $(arg sound_loc_topic) $(arg camera_frames) $(arg camera_info) $(arg best_face)  $(arg rate) $(arg sound_db_threshold)" output="screen">
+  </node>
+</launch>
+

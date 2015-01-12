@@ -1,0 +1,36 @@
+How it works
+============
+
+* Pftracker has the following execution flow:
+
+#. Adquire image.
+
+#.  When the user select the target, initialize particles.
+
+#. Move particles.
+
+#. Select best particle comparing the histogram of the target with histogram of the particle.
+
+#. Resample particles (duplicating the first half better particles).
+
+
+The histogram is normalized before comparison, the sum of all its values is equal to one.
+
+The histogram comparison is made with the Bhattacharyya distance:
+
+.. image::
+  ../ _static/formula.png
+
+Where N is the number of histogram bins.
+
+
+The movement of the particles is made in the following way:
+
+``particle.x = particle.x + gaussianNumberCenteredAtZero(SD)``
+
+``particle.y = particle.y + gaussianNumberCenteredAtZero(SD)``
+
+The same procedure is made with the particle scale (the factor by which is multiplied the initial width and height selected by the user).
+
+
+
