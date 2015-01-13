@@ -4,7 +4,7 @@
 import roslib
 import rospy
 from pal_detection_msgs.msg import FaceDetection
-from test.msg import *
+from fusion.msg import *
 
 #other imports
 from AIbot import *

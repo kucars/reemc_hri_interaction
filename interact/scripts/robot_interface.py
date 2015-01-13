@@ -4,8 +4,8 @@
 import roslib
 import rospy
 import actionlib
-from test.msg import *
-from nao_msgs.msg import *
+from fusion.msg import *
+#from nao_msgs.msg import *
 
 #other imports
 from random import randint
@@ -17,7 +17,7 @@ global pubs
 global client
 class Robot_interface:
 	def reset_interaction(self,request_srv):
-		resetting_client = actionlib.SimpleActionClient(request_srv,test.msg.test_msgAction)
+		resetting_client = actionlib.SimpleActionClient(request_srv,fusion.msg.test_msgAction)
 		print "resetting the service",request_srv
 		resetting_client.wait_for_server()
 		print "sending the goal request to ",request_srv
