@@ -5,7 +5,7 @@
   <description>The particle_tracker package</description>
   <maintainer email="omar-sinan@hotmail.com">omar sinan</maintainer>
   
-  <license>BSD</license>
+  <license>LGPLv3</license>
   
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>cv_bridge</build_depend>
