@@ -3,9 +3,6 @@
 #include <pal_detection_msgs/FaceDetections.h>
 #include <pal_detection_msgs/FaceDetection.h>
 
-//NAO headers
-#include <nao_msgs/JointAnglesWithSpeed.h>
-
 // ROS headers
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
@@ -23,6 +20,7 @@
 #include <opencv2/objdetect/objdetect.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
 //C++ headers
 #include <iostream>
 #include <math.h>

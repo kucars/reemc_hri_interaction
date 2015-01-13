@@ -6,7 +6,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  nao_msgs
   pcl_conversions
   pcl_ros
   pal_interaction_msgs
@@ -28,13 +27,15 @@ include_directories(
 )
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(debug src/debug.cpp)
-target_link_libraries(debug ${catkin_LIBRARIES})
+#add_executable(debug src/debug.cpp)
+#target_link_libraries(debug ${catkin_LIBRARIES})
+#add_dependencies(debug pal_detection_msgs_generate_messages_cpp)
 
 
 add_executable(fusion src/fusion.cpp)
 target_link_libraries(fusion ${catkin_LIBRARIES})
+add_dependencies(fusion pal_detection_msgs_generate_messages_cpp)
 
-add_executable(client src/client.cpp)
-target_link_libraries(client ${catkin_LIBRARIES})
-
+#add_executable(client src/client.cpp)
+#target_link_libraries(client ${catkin_LIBRARIES})
+#add_dependencies(client pal_detection_msgs_generate_messages_cpp)

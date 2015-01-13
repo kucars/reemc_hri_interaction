@@ -3,10 +3,6 @@
 #include <pal_detection_msgs/FaceDetections.h>
 #include <trajectory_msgs/JointTrajectory.h>
 
-//NAO headers
-#include <nao_msgs/JointAnglesWithSpeed.h>
-#include <nao_msgs/JointAnglesWithSpeedAction.h>
-
 // ROS headers
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
@@ -36,9 +32,9 @@
 #include "particle.h"
 #include "Recognizer.h"
 
-#include <test/test_msgAction.h>
-#include <test/test_msgActionGoal.h>
-#include <test/test_msgActionResult.h>
+#include <fusion/test_msgAction.h>
+#include <fusion/test_msgActionGoal.h>
+#include <fusion/test_msgActionResult.h>
 using namespace std;
 using namespace cv;
 using namespace ros;
@@ -46,7 +42,7 @@ using namespace ros;
 
 
 typedef actionlib::SimpleActionClient<control_msgs::PointHeadAction> Client;
-typedef actionlib::SimpleActionServer<test::test_msgAction> Server;
+typedef actionlib::SimpleActionServer<fusion::test_msgAction> Server;
 #define PI 3.14159265
 enum Track_state {TRACK_FACE, NO_FACE, RESET_TRACKING};
 Track_state trck_stat;
@@ -125,7 +121,7 @@ void getCameraIntrinsics(const sensor_msgs::CameraInfoConstPtr& msg)
   intrinsicsReceived = true;
 }
 
-void execute(const test::test_msgGoalConstPtr& goal, Server* as)
+void execute(const fusion::test_msgGoalConstPtr& goal, Server* as)
 {
   //called based on requests
   if(goal->request=="reset")

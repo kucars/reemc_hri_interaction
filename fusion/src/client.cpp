@@ -3,9 +3,6 @@
 #include <pal_detection_msgs/FaceDetections.h>
 #include <pal_detection_msgs/FaceDetection.h>
  
-//NAO headers
-#include <nao_msgs/JointAnglesWithSpeed.h>
- 
 // ROS headers
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
@@ -31,9 +28,6 @@
 #include <stdlib.h>
 #include <fstream>
 #include <sstream>
-
-#include <test/test_msgAction.h>
-#include <test/test_msgActionResult.h>
 
 using namespace std;
 using namespace ros;

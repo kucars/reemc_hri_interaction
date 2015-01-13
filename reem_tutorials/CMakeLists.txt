@@ -31,6 +31,7 @@ target_link_libraries(look_to_point ${catkin_LIBRARIES})
 
 add_executable(my_look                        src/my_controler.cpp)
 target_link_libraries(my_look ${catkin_LIBRARIES})
+add_dependencies(my_look pal_detection_msgs_generate_messages_cpp)
 
 add_executable(face_detection src/face_detection.cpp)
 target_link_libraries(face_detection ${catkin_LIBRARIES})

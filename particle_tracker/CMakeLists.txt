@@ -7,7 +7,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   sensor_msgs
-  nao_msgs
   pal_detection_msgs
   actionlib_msgs
   pcl_conversions
@@ -22,3 +21,4 @@ catkin_package(
 ## Declare a cpp executable
 add_executable( particle_tracker src/main.cpp src/tracker.cpp src/particle.cpp src/Recognizer.cpp)
 target_link_libraries(particle_tracker ${catkin_LIBRARIES})
+add_dependencies(particle_tracker pal_detection_msgs_generate_messages_cpp)

@@ -3,9 +3,6 @@
 #include <pal_detection_msgs/FaceDetections.h>
 #include <pal_detection_msgs/FaceDetection.h>
  
-//NAO headers
-#include <nao_msgs/JointAnglesWithSpeed.h>
- 
 // ROS headers
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
@@ -31,9 +28,9 @@
 #include <fstream>
 #include <sstream>
 
-#include <test/test_msgAction.h>
-#include <test/test_msgActionGoal.h>
-#include <test/test_msgActionResult.h>
+#include <fusion/test_msgAction.h>
+#include <fusion/test_msgActionGoal.h>
+#include <fusion/test_msgActionResult.h>
 
 using namespace std;
 using namespace ros;
@@ -41,7 +38,7 @@ using namespace cv;
 
 #define PI 3.14159265
 
-typedef actionlib::SimpleActionServer<test::test_msgAction> Server;
+typedef actionlib::SimpleActionServer<fusion::test_msgAction> Server;
 enum sound_beam_loc { NO_SOUND_DETECTED, SOUND_DETECTED};
 enum face_stat {WAITING_FOR_REQUEST, FACE_REQUESTED,FACE_SELECTED};
 string ToString(double number);
@@ -120,7 +117,7 @@ void getCameraIntrinsics(const sensor_msgs::CameraInfoConstPtr& msg)
 }
 
 
-void execute(const test::test_msgGoalConstPtr& goal, Server* as)
+void execute(const fusion::test_msgGoalConstPtr& goal, Server* as)
 {
   //called based on requests
   if(goal->request=="reset")
