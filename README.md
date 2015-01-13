@@ -23,6 +23,7 @@ using the NAO robot:
 8. rosrun interact gspeech
 
 using the REEMC simulation:
+
 1. roslauch  reemc_gazebo small_office.launch			      #launch the gazebo simulation along with the reem sim model
 2. roslaunch pal_face_detector_opencv detector.launch		#make sure that you specify the right camera frames topic
 3. rosrun pal_jackproc jackDeployer --device=hw:1,0		  #make sure that you change the audio card ID
