@@ -7,6 +7,7 @@ Audio Visual HRI Interaction with Reemc Robot from Pal Robotics
 3. Openni
 4. sox, a command line sound processing tool
 5. sound localization package ("pal-asr packages")
+6. wolframalpha python package if your planning to use interact node (pip install wolframalpha)
 
 ##How to run
 It is recommended that you run the commands in the specified order.
