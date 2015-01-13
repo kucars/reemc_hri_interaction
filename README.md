@@ -1,16 +1,14 @@
 # Reem Audio Visual Interaction
 Audio Visual HRI Interaction with Reemc Robot from Pal Robotics
 
-Requirements and dependencies
-=============================
+## Requirements and dependencies
 1. Python 2.x
 2. Opencv 2.x/3.x
 3. Openni
 4. sox, a command line sound processing tool
 5. sound localization package ("pal-asr packages")
 
-How to run
-==========
+##How to run
 It is recommended that you run the commands in the specified order.
 
 using the NAO robot:
