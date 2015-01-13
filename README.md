@@ -12,6 +12,7 @@ Audio Visual HRI Interaction with Reemc Robot from Pal Robotics
 It is recommended that you run the commands in the specified order.
 
 using the NAO robot:
+
 1. roslauch nao_driver nao_driver.launch
 2. rosservice call /body_stiffness enable			#enable joints stiffness
 3. roslaunch pal_face_detector_opencv detector.launch		#make sure that you specify the right camera frames topic
