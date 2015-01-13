@@ -32,7 +32,7 @@ using the REEMC simulation:
 6. roslauch particle_tracker tracker.launch			        #make sure that you specify the right camera frames topic
 7. rosrun interact gspeech
 
-Nodes:
+Notes:
 ======
 * The interaction nodes implement client-server model in which the "interact speech" node issue requests to the "data fusion" and the "particle tracker" nodes. Therefore it is important to run the three nodes mention in the specified order.
 * if you change an argument in any of the launch files used in steps 5-7, make sure that you modify the other launch files accordingly
