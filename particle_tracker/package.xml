@@ -15,17 +15,21 @@
   <build_depend>rospy</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>pal_detection_msgs</build_depend>
-  <build_depend>nao_msgs</build_depend>
   <build_depend> actionlib_msgs</build_depend>
-
+  <build_depend> pcl_conversions</build_depend>
+  <build_depend> pcl_ros</build_depend>
+  <build_depend> fusion</build_depend>
   
   <run_depend>cv_bridge</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>pal_detection_msgs</run_depend>
   <run_depend> std_msgs</run_depend>
-  <run_depend>nao_msgs</run_depend>
   <run_depend>pal_detection_msgs</run_depend>
   <run_depend>image_transport</run_depend>
   <run_depend> actionlib_msgs</run_depend>
+  <run_depend> fusion</run_depend>
+  <run_depend> pcl_conversions</run_depend>
+  <run_depend> pcl_ros</run_depend>
+
 </package>
