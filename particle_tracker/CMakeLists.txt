@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib_msgs
   pcl_conversions
   pcl_ros
+  fusion
 )
 
 catkin_package(
@@ -18,7 +19,9 @@ catkin_package(
   CATKIN_DEPENDS cv_bridge image_transport roscpp sensor_msgs actionlib_msgs
 )
 
+include_directories(${catkin_INCLUDE_DIRS})
+
 ## Declare a cpp executable
 add_executable( particle_tracker src/main.cpp src/tracker.cpp src/particle.cpp src/Recognizer.cpp)
 target_link_libraries(particle_tracker ${catkin_LIBRARIES})
-add_dependencies(particle_tracker pal_detection_msgs_generate_messages_cpp)
+add_dependencies(particle_tracker  fusion_generate_messages_cpp pal_detection_msgs_generate_messages_cpp)
