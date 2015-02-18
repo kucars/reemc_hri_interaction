@@ -14,25 +14,25 @@ It is recommended that you run the commands in the specified order.
 
 using the NAO robot:
 
-1. roslauch nao_driver nao_driver.launch
-2. rosservice call /body_stiffness enable			#enable joints stiffness
+1. roslaunch nao_driver nao_driver.launch
+2. rosservice call /body_stiffness enable			          #enable joints stiffness
 3. roslaunch pal_face_detector_opencv detector.launch		#make sure that you specify the right camera frames topic
-4. rosrun pal_jackproc jackDeployer --device=hw:1,0		#make sure that you change the audio card ID
+4. rosrun pal_jackproc jackDeployer --device=hw:1,0		  #make sure that you change the audio card ID
 5. rosrun pal_sound_loc pal_sound_loc
-6. roslauch fusion fusion					#make sure that you specify the right camera frames topic
-7. roslauch particle_tracker tracker.launch			#make sure that you specify the right camera frames topic
+6. roslaunch fusion fusion.launch					              #make sure that you specify the right camera frames topic
+7. roslaunch particle_tracker tracker.launch			      #make sure that you specify the right camera frames topic
 8. rosrun interact gspeech
 
 using the REEMC simulation:
-
-1. roslauch  reemc_gazebo small_office.launch			      #launch the gazebo simulation along with the reem sim model
-2. roslaunch fusion face_detector.launch		            #make sure that you specify the right camera frames topic
-3. rosrun pal_jackproc jackDeployer --device=hw:1,0		  #make sure that you change the audio card ID
-4. rosrun pal_sound_loc pal_sound_loc
-5. roslauch fusion fusion					                      #make sure that you specify the right camera frames topic
-6. roslauch particle_tracker tracker.launch			        #make sure that you specify the right camera frames topic
-7. rosrun interact gspeech
-
+'''
+roslaunch  reemc_gazebo small_office.launch			    #launch the gazebo simulation along with the reem sim model
+roslaunch fusion face_detector.launch		            #make sure that you specify the right camera frames topic
+rosrun pal_jackproc jackDeployer --device=hw:1,0		  #make sure that you change the audio card ID
+rosrun pal_sound_loc pal_sound_loc
+roslauch fusion fusion.launch		                    #make sure that you specify the right camera frames topic
+roslauch particle_tracker tracker.launch			        #make sure that you specify the right camera frames topic
+rosrun interact gspeech
+'''
 Notes:
 ======
 * The interaction nodes implement client-server model in which the "interact speech" node issue requests to the "data fusion" and the "particle tracker" nodes. Therefore it is important to run the three nodes mention in the specified order.
