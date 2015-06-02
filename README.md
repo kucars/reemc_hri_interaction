@@ -29,19 +29,32 @@ roslaunch particle_tracker tracker.launch
 rosrun interact gspeech
 ```
 using the REEMC simulation:
+
+launch the gazebo simulation along with the reem sim model:
 ```
-#launch the gazebo simulation along with the reem sim model
-roslaunch  reemc_gazebo small_office.launch			     
-#make sure that you specify the right camera frames topic
+roslaunch reem_gazebo office_with_humans.launch	     
+```
+make sure that you specify the right camera frames topic
+```
 roslaunch fusion face_detector.launch		         
-#make sure that you change the audio card ID
+```
+be careful to select the correct audio card ID/hw
+```
 rosrun pal_jackproc jackDeployer --device=hw:1,0		 
 rosrun pal_sound_loc pal_sound_loc
-#make sure that you specify the right camera frames topic
-roslauch fusion fusion.launch		                  
-#make sure that you specify the right camera frames topic
-roslauch particle_tracker tracker.launch			       
-rosrun interact gspeech
+```
+
+Start the fusion node that combines sound and face tracking to interact
+```
+roslaunch fusion fusion.launch		                  
+```
+Run the particle filter used to track the face
+```
+roslaunch particle_tracker tracker.launch			       
+```
+Run the AI bot that will record audio, then runs the speech to text engine, then submits the text to the online AI bot, gets the responce in a text form, and passes the text to the text to speech engine
+```
+rosrun interact gspeech.py
 ```
 Notes:
 ======
