@@ -28,17 +28,17 @@ roslaunch fusion fusion.launch
 roslaunch particle_tracker tracker.launch			        
 rosrun interact gspeech
 ```
-using the REEMC simulation:
+Using the REEMC simulation:
 
-launch the gazebo simulation along with the reem sim model:
+launch the gazebo simulation along with the reem robot model, and some human models:
 ```
 roslaunch reem_gazebo office_with_humans.launch	     
 ```
-make sure that you specify the right camera frames topic
+Insure that the correct frame topic is selected in the launch file
 ```
 roslaunch fusion face_detector.launch		         
 ```
-be careful to select the correct audio card ID/hw
+Setup the audio node and select the correct ID/hw
 ```
 rosrun pal_jackproc jackDeployer --device=hw:1,0		 
 rosrun pal_sound_loc pal_sound_loc
